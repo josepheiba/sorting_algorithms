@@ -14,7 +14,8 @@ void insertion_sort_list(listint_t **list)
   while (ll_ptr != NULL)
   {
     ll_ptr_idx = ll_ptr->next;
-    while (ll_ptr->prev != NULL && ll_ptr->n < ll_ptr->prev->n) {
+    while (ll_ptr->prev != NULL && ll_ptr->n < ll_ptr->prev->n)
+    {
       swap_nodes(ll_ptr->prev, ll_ptr, list);
       print_list(*list);
     }
@@ -23,7 +24,7 @@ void insertion_sort_list(listint_t **list)
 }
 
 /**
- * insertion_sort_list - Prints an array of integers
+ * swap_nodes - Prints an array of integers
  *
  * @array: The array to be printed
  * @size: Number of elements in @array
