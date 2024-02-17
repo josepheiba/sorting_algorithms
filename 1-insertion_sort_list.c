@@ -10,6 +10,11 @@ void insertion_sort_list(listint_t **list)
 {
   listint_t *ll_ptr, *ll_ptr_idx; 
 
+  if ((*list)->next == NULL || *list == NULL)
+  {
+    return;
+  }
+
   ll_ptr = (*list)->next;
   while (ll_ptr != NULL)
   {
