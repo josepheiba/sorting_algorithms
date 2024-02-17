@@ -3,8 +3,7 @@
 /**
  * insertion_sort_list - Prints an array of integers
  *
- * @array: The array to be printed
- * @size: Number of elements in @array
+ * @list: The array to be printed
  */
 void insertion_sort_list(listint_t **list)
 {
