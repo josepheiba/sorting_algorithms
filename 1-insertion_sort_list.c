@@ -30,8 +30,9 @@ void insertion_sort_list(listint_t **list)
 /**
  * swap_nodes - Prints an array of integers
  *
- * @array: The array to be printed
- * @size: Number of elements in @array
+ * @node_prev: The array to be printed
+ * @node: Number of elements in @array
+ * @list: Number of elements in @array
  */
 void swap_nodes(listint_t *node_prev, listint_t *node, listint_t **list)
 {
