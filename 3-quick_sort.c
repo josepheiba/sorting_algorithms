@@ -27,8 +27,7 @@ void q_sort(int *array, int l, int r, size_t size)
   if (l >= r)
     return;
   p = partition(array, l, r, size);
-  if (l != 0)
-    q_sort(array, l, p - 1, size);
+  q_sort(array, l, p - 1, size);
   q_sort(array, p + 1, r, size);
 }
 
