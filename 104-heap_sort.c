@@ -8,9 +8,10 @@
  */
 void swap(int *a, int *b)
 {
-    int tmp = *a;
-    *a = *b;
-    *b = tmp;
+	int tmp = *a;
+
+	*a = *b;
+	*b = tmp;
 }
 
 /**
@@ -22,45 +23,50 @@ void swap(int *a, int *b)
  */
 void sift_down(int *array, size_t start, size_t end, size_t size)
 {
-    size_t root = start;
-    while ((root * 2) + 1 <= end) {
-        size_t child = (root * 2) + 1;
-        size_t swap_index = root;
+	size_t root = start;
 
-        if (array[swap_index] < array[child])
-            swap_index = child;
+	while ((root * 2) + 1 <= end)
+	{
+		size_t child = (root * 2) + 1;
+		size_t swap_index = root;
 
-        if (child + 1 <= end && array[swap_index] < array[child + 1])
-            swap_index = child + 1;
+		if (array[swap_index] < array[child])
+			swap_index = child;
 
-        if (swap_index == root)
-            return;
-        
-        swap(&array[root], &array[swap_index]);
-        print_array(array, size);
-        root = swap_index;
-    }
+		if (child + 1 <= end && array[swap_index] < array[child + 1])
+			swap_index = child + 1;
+
+		if (swap_index == root)
+			return;
+
+		swap(&array[root], &array[swap_index]);
+		print_array(array, size);
+		root = swap_index;
+	}
 }
 
 /**
- * heap_sort - Sorts an array of integers in ascending order using Heap sort algorithm
+ * heap_sort - Sorts an array of intege
  * @array: Array to be sorted
  * @size: Size of the array
  */
 void heap_sort(int *array, size_t size)
 {
-  int i;
-  size_t j;
-    if (array == NULL || size < 2)
-        return;
+	int i;
+	size_t j;
 
-    for (i = size / 2 - 1; i >= 0; i--) {
-        sift_down(array, i, size - 1, size);
-    }
+	if (array == NULL || size < 2)
+		return;
 
-    for (j = size - 1; j > 0; j--) {
-        swap(&array[0], &array[j]);
-        print_array(array, size);
-        sift_down(array, 0, j - 1, size);
-    }
+	for (i = size / 2 - 1; i >= 0; i--)
+	{
+		sift_down(array, i, size - 1, size);
+	}
+
+	for (j = size - 1; j > 0; j--)
+	{
+		swap(&array[0], &array[j]);
+		print_array(array, size);
+		sift_down(array, 0, j - 1, size);
+	}
 }
