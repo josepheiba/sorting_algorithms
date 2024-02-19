@@ -1,6 +1,5 @@
 #include "sort.h"
 #include <stdio.h>
-#include <sys/_types/_size_t.h>
 
 /**
  * merge_sort - Prints an array of integers
