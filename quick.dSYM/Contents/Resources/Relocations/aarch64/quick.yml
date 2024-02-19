@@ -2,12 +2,12 @@
 triple:          'arm64-apple-darwin'
 binary-path:     quick
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BA0, symSize: 0xB0 }
-  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BA0, symSize: 0xB0 }
-  - { offsetInCU: 0x26, offset: 0xCD, size: 0x8, addend: 0x0, symName: _quick_sort, symObjAddr: 0x0, symBinAddr: 0x100003C50, symSize: 0x3C }
-  - { offsetInCU: 0x3A, offset: 0xE1, size: 0x8, addend: 0x0, symName: _quick_sort, symObjAddr: 0x0, symBinAddr: 0x100003C50, symSize: 0x3C }
-  - { offsetInCU: 0x6C, offset: 0x113, size: 0x8, addend: 0x0, symName: _q_sort, symObjAddr: 0x3C, symBinAddr: 0x100003C8C, symSize: 0x90 }
-  - { offsetInCU: 0xC8, offset: 0x16F, size: 0x8, addend: 0x0, symName: _partition, symObjAddr: 0xCC, symBinAddr: 0x100003D1C, symSize: 0x16C }
-  - { offsetInCU: 0x26, offset: 0x241, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003E88, symSize: 0xCC }
-  - { offsetInCU: 0x41, offset: 0x25C, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003E88, symSize: 0xCC }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BD0, symSize: 0xAC }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003BD0, symSize: 0xAC }
+  - { offsetInCU: 0x26, offset: 0xCD, size: 0x8, addend: 0x0, symName: _quick_sort, symObjAddr: 0x0, symBinAddr: 0x100003C7C, symSize: 0x3C }
+  - { offsetInCU: 0x3A, offset: 0xE1, size: 0x8, addend: 0x0, symName: _quick_sort, symObjAddr: 0x0, symBinAddr: 0x100003C7C, symSize: 0x3C }
+  - { offsetInCU: 0x6C, offset: 0x113, size: 0x8, addend: 0x0, symName: _q_sort, symObjAddr: 0x3C, symBinAddr: 0x100003CB8, symSize: 0x90 }
+  - { offsetInCU: 0xC8, offset: 0x16F, size: 0x8, addend: 0x0, symName: _partition, symObjAddr: 0xCC, symBinAddr: 0x100003D48, symSize: 0x16C }
+  - { offsetInCU: 0x26, offset: 0x241, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0xCC }
+  - { offsetInCU: 0x41, offset: 0x25C, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003EB4, symSize: 0xCC }
 ...
