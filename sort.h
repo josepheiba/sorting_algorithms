@@ -33,7 +33,6 @@ void swap_nodes_2(listint_t *node_prev, listint_t *node, listint_t **list);
 void q_sort(int *array, int l, int r, size_t size);
 void m_sort(int *array, size_t start, size_t end, size_t size);
 int partition(int *array, int l, int r, size_t size);
-void merge(int *left, size_t left_size, int *right, size_t right_size, int *merged);
 
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
