@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * insertion_sort_list - Prints an array of integers
+ * quick_sort - Prints an array of integers
  *
  * @array: The array to be printed
  * @size: The array to be printed
