@@ -34,6 +34,10 @@ void q_sort(int *array, int l, int r, size_t size);
 void m_sort(int *array, size_t start, size_t end, size_t size);
 int partition(int *array, int l, int r, size_t size);
 
+void heap_sort(int *array, size_t size);
+void heapify(int *array, size_t size, size_t i);
+void swap(int *a, int *b);
+
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
 
