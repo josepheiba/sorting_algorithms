@@ -39,7 +39,6 @@ void q_sort(int *array, int l, int r, size_t size)
 int partition(int *array, int l, int r, size_t size)
 {
   int pivot, i, j, tmp;
-  (void)size;
 
   pivot = array[r];
   j = l - 1;
