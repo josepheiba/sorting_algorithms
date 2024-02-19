@@ -1,0 +1,13 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     merge
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039AC, symSize: 0xB0 }
+  - { offsetInCU: 0x41, offset: 0x41, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x1000039AC, symSize: 0xB0 }
+  - { offsetInCU: 0x26, offset: 0xCD, size: 0x8, addend: 0x0, symName: _merge_sort, symObjAddr: 0x0, symBinAddr: 0x100003A5C, symSize: 0x38 }
+  - { offsetInCU: 0x4D, offset: 0xF4, size: 0x8, addend: 0x0, symName: _merge_sort, symObjAddr: 0x0, symBinAddr: 0x100003A5C, symSize: 0x38 }
+  - { offsetInCU: 0x7F, offset: 0x126, size: 0x8, addend: 0x0, symName: _m_sort, symObjAddr: 0x38, symBinAddr: 0x100003A94, symSize: 0x224 }
+  - { offsetInCU: 0x113, offset: 0x1BA, size: 0x8, addend: 0x0, symName: _merge, symObjAddr: 0x25C, symBinAddr: 0x100003CB8, symSize: 0x19C }
+  - { offsetInCU: 0x26, offset: 0x285, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0xCC }
+  - { offsetInCU: 0x41, offset: 0x2A0, size: 0x8, addend: 0x0, symName: _print_array, symObjAddr: 0x0, symBinAddr: 0x100003E54, symSize: 0xCC }
+...
