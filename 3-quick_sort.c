@@ -32,6 +32,7 @@ void q_sort(int *array, int l, int r, size_t size)
 /**
  * partition - Prints an array of integers
  *
+ * @array: The array to be printed
  * @l: The array to be printed
  * @r: The array to be printed
  * @size: The array to be printed
