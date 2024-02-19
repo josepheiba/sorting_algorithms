@@ -44,20 +44,19 @@ int partition(int *array, int l, int r, size_t size)
   int pivot, i, j, tmp;
 
   pivot = array[r];
-  j = l - 1;
+  j = l;
   for (i = l; i < r; i++)
   {
     if (array[i] < pivot)
     {
-      j++;
       tmp = array[i];
       array[i] = array[j];
       array[j] = tmp;
       if(i != j)
         print_array(array, size);
+      j++;
     }
   }
-  j++;
   tmp = array[j];
   array[j] = array[r];
   array[r] = tmp;
