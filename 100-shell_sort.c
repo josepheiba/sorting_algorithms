@@ -10,4 +10,5 @@ void shell_sort(int *array, size_t size)
 {
   int i, j, outer_layer;
 
+
 }
