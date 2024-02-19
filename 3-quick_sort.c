@@ -8,7 +8,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-  q_sort(array, 0, (long int)size - 1, size);
+  q_sort(array, 0, (int)(size - 1), size);
 }
 
 /**
@@ -18,9 +18,9 @@ void quick_sort(int *array, size_t size)
  * @r: The array to be printed
  * @size: The array to be printed
  */
-void q_sort(int *array, long int l, long int r, size_t size)
+void q_sort(int *array, int l, int r, size_t size)
 {
-  long int p;
+  int p;
 
   if (l >= r)
     return;
@@ -37,9 +37,9 @@ void q_sort(int *array, long int l, long int r, size_t size)
  * @r: The array to be printed
  * @size: The array to be printed
  */
-long int partition(int *array, long int l, long int r, size_t size)
+int partition(int *array, int l, int r, size_t size)
 {
-  long int pivot, i, j, tmp;
+  int pivot, i, j, tmp;
 
   pivot = array[r];
   j = l - 1;

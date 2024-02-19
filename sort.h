@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/_types/_size_t.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -26,8 +25,8 @@ void insertion_sort_list(listint_t **list);
 void quick_sort(int *array, size_t size);
 
 void swap_nodes(listint_t *node_prev, listint_t *node, listint_t **list);
-void q_sort(int *array, long int l, long int r, size_t size);
-long int partition(int *array, long int l, long int r, size_t size);
+void q_sort(int *array, int l, int r, size_t size);
+int partition(int *array, int l, int r, size_t size);
 
 void print_list(const listint_t *list);
 void print_array(const int *array, size_t size);
