@@ -3,7 +3,6 @@
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <sys/_types/_size_t.h>
 
 /**
  * struct listint_s - Doubly linked list node
