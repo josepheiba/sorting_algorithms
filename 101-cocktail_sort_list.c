@@ -5,16 +5,16 @@
  *
  * @list: The array to be printed
  */
-void insertion_sort_list(listint_t **list)
+void cocktail_sort_list(listint_t **list)
 {
 	listint_t *ll_ptr, *ll_ptr_idx;
 
-  if (list == NULL || !(*list) || (*list)->next == NULL)
+	if (*list == NULL || (*list)->next == NULL)
 	{
 		return;
 	}
 
-	ll_ptr = (*list)->next;
+	ll_ptr = (*list);
 	while (ll_ptr != NULL)
 	{
 		ll_ptr_idx = ll_ptr->next;
@@ -36,20 +36,4 @@ void insertion_sort_list(listint_t **list)
  */
 void swap_nodes(listint_t *node_prev, listint_t *node, listint_t **list)
 {
-	listint_t *node_next = NULL;
-
-	node_next = node->next;
-
-	if (node_prev->prev != NULL)
-		node_prev->prev->next = node;
-	else
-		*list = node;
-	node->prev = node_prev->prev;
-
-	node->next = node_prev;
-	node_prev->prev = node;
-
-	node_prev->next = node_next;
-	if (node_next != NULL)
-		node_next->prev = node_prev;
 }
