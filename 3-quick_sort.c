@@ -4,7 +4,8 @@
 /**
  * insertion_sort_list - Prints an array of integers
  *
- * @list: The array to be printed
+ * @array: The array to be printed
+ * @size: The array to be printed
  */
 void quick_sort(int *array, size_t size)
 {
@@ -14,6 +15,7 @@ void quick_sort(int *array, size_t size)
 /**
  * q_sort - Prints an array of integers
  *
+ * @array: The array to be printed
  * @l: The array to be printed
  * @r: The array to be printed
  * @size: The array to be printed
