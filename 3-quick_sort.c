@@ -39,6 +39,7 @@ void q_sort(int *array, int l, int r, size_t size)
 int partition(int *array, int l, int r, size_t size)
 {
   int pivot, i, j, tmp;
+  (void)size;
 
   pivot = array[r];
   j = l - 1;
@@ -50,12 +51,15 @@ int partition(int *array, int l, int r, size_t size)
       tmp = array[i];
       array[i] = array[j];
       array[j] = tmp;
+      if(i != j)
+        print_array(array, size);
     }
   }
-  print_array(array, size);
   j++;
   tmp = array[j];
   array[j] = array[r];
   array[r] = tmp;
+  if(j != r)
+    print_array(array, size);
   return(j);
 }
