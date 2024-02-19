@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * insertion_sort_list - Prints an array of integers
+ * cocktail_sort_list - Prints an array of integers
  *
  * @list: The array to be printed
  */
@@ -14,37 +14,35 @@ void cocktail_sort_list(listint_t **list)
 		return;
 	}
 
-  right_ptr = left_ptr = NULL;
+	right_ptr = left_ptr = NULL;
 	ll_ptr = (*list);
-  do
-  {
-    while (ll_ptr != right_ptr && ll_ptr->next != NULL)
-    {
-      if (ll_ptr->n > ll_ptr->next->n)
-      {
-        swap_nodes(ll_ptr, ll_ptr->next, list);
-        print_list(*list);
-      }
-      else
-        ll_ptr = ll_ptr->next;
-    }
-    ll_ptr = ll_ptr->prev;
-    right_ptr = ll_ptr;
-    
-    while (ll_ptr != left_ptr && ll_ptr->prev != NULL)
-    {
-      if (ll_ptr->n < ll_ptr->prev->n)
-      {
-        swap_nodes(ll_ptr->prev, ll_ptr, list);
-        print_list(*list);
-      }
-      else
-        ll_ptr = ll_ptr->prev;
-    }
-    ll_ptr = ll_ptr->next;
-    left_ptr = ll_ptr;
-  }
-	while (left_ptr != right_ptr && left_ptr->next != right_ptr);
+	do {
+		while (ll_ptr != right_ptr && ll_ptr->next != NULL)
+		{
+			if (ll_ptr->n > ll_ptr->next->n)
+			{
+				swap_nodes(ll_ptr, ll_ptr->next, list);
+				print_list(*list);
+			}
+			else
+				ll_ptr = ll_ptr->next;
+		}
+		ll_ptr = ll_ptr->prev;
+		right_ptr = ll_ptr;
+
+		while (ll_ptr != left_ptr && ll_ptr->prev != NULL)
+		{
+			if (ll_ptr->n < ll_ptr->prev->n)
+			{
+				swap_nodes(ll_ptr->prev, ll_ptr, list);
+				print_list(*list);
+			}
+			else
+				ll_ptr = ll_ptr->prev;
+		}
+		ll_ptr = ll_ptr->next;
+		left_ptr = ll_ptr;
+	} while (left_ptr != right_ptr && left_ptr->next != right_ptr);
 }
 
 /**
