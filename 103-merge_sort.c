@@ -12,6 +12,14 @@ void merge_sort(int *array, size_t size)
 	m_sort(array, 0, size - 1, size);
 }
 
+/**
+ * m_sort - Prints an array of integers
+ *
+ * @array: The array to be printed
+ * @start: The array to be printed
+ * @end: The array to be printed
+ * @size: Number of elements in @array
+ */
 void m_sort(int *array, size_t start, size_t end, size_t size)
 {
 	size_t half, i, j, k;
@@ -43,7 +51,8 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 	for (i = 0; i < half - start + 1; i++)
 	{
 		printf("%d", ar[i]);
-		if (i < half - start) {
+		if (i < half - start)
+		{
 			printf(", ");
 		}
 	}
@@ -53,7 +62,8 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 	for (j = 0; j < end - half; j++)
 	{
 		printf("%d", ray[j]);
-		if (j < end - half - 1) {
+		if (j < end - half - 1)
+		{
 			printf(", ");
 		}
 
@@ -99,7 +109,8 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 	for (i = 0; i < end - start + 1; i++)
 	{
 		printf("%d", aray[i]);
-		if (i < end - start) {
+		if (i < end - start)
+		{
 			printf(", ");
 		}
 	}
