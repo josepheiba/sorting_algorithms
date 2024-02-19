@@ -103,7 +103,7 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 			printf(", ");
 		}
 	}
-	printf("\n\n");
+	printf("\n");
 
 	free(ar);
 	free(ray);
