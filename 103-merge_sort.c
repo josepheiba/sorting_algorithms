@@ -41,12 +41,23 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 	printf("Merging...\n");
 	printf("[left]: ");
 	for (i = 0; i < half - start + 1; i++)
-		printf("%d ", ar[i]);
+  {
+		printf("%d", ar[i]);
+    if (i < half - start) {
+        printf(", ");
+    }
+  }
 	printf("\n");
 
 	printf("[right]: ");
 	for (j = 0; j < end - half; j++)
-		printf("%d ", ray[j]);
+  {
+		printf("%d", ray[j]);
+    if (j < end - half - 1) {
+        printf(", ");
+    }
+
+  }
 	printf("\n");
 
 	i = 0;
@@ -86,7 +97,12 @@ void m_sort(int *array, size_t start, size_t end, size_t size)
 
 	printf("[Done]: ");
 	for (i = 0; i < end - start + 1; i++)
-		printf("%d ", aray[i]);
+  {
+		printf("%d", aray[i]);
+    if (i < end - start) {
+        printf(", ");
+    }
+  }
 	printf("\n\n");
 
 	free(ar);
