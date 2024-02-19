@@ -9,7 +9,6 @@
 void quick_sort(int *array, size_t size)
 {
   q_sort(array, 0, (int)(size - 1), size);
-  print_array(array, size);
 }
 
 /**
