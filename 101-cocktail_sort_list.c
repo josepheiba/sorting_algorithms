@@ -40,7 +40,7 @@ void cocktail_sort_list(listint_t **list)
 		}
 		ll_ptr = ll_ptr->next;
 		left_ptr = ll_ptr;
-	} while (left_ptr <= right_ptr);
+	} while (left_ptr != right_ptr);
 }
 
 /**
