@@ -36,10 +36,10 @@ void counting_sort(int *array, size_t size)
         counts[current_num]++;
     }
 
-    print_array(counts, max_num + 1);
-
     for (i = 1; i < (size_t)(max_num + 1); i++)
         counts[i] += counts[i - 1];
+
+    print_array(counts, max_num + 1);
 
     sorted_array = malloc(sizeof(int) * size);
     if (sorted_array == NULL)
