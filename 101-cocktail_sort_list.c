@@ -12,9 +12,10 @@ void cocktail_sort_list(listint_t **list)
 	if (list == NULL || !(*list) || (*list)->next == NULL)
 		return;
 
-	right_ptr = left_ptr = NULL;
-	ll_ptr = (*list);
-	do {
+	right_ptr = NULL;
+	ll_ptr = left_ptr = (*list);
+	while (left_ptr != right_ptr && left_ptr->next)
+  {
 		while (ll_ptr != right_ptr && ll_ptr->next != NULL)
 		{
 			if (ll_ptr->n > ll_ptr->next->n)
@@ -40,7 +41,7 @@ void cocktail_sort_list(listint_t **list)
 		}
 		ll_ptr = ll_ptr->next;
 		left_ptr = ll_ptr;
-	} while (left_ptr != right_ptr && left_ptr->next != NULL && right_ptr->prev != NULL);
+	}
 }
 
 /**
