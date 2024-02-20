@@ -38,6 +38,10 @@ void heap_sort(int *array, size_t size);
 void heapify(int *array, size_t size, size_t i);
 void swap(int *a, int *b);
 
+void swap_ints(int *x, int *y);
+int lomuto_partition(int *array, size_t size, int left, int right);
+void lomuto_sort(int *array, size_t size, int left, int right);
+
 void radix_sort(int *array, size_t size);
 
 void print_list(const listint_t *list);
