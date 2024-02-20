@@ -49,10 +49,10 @@ int partition(int *array, int l, int r, size_t size)
 	int pivot, i, j, tmp;
 
 	pivot = array[r];
-	i = l - 1;
-	for (j = l; j < r - 1; i++)
+	j = l;
+	for (i = l; i < r; i++)
 	{
-		if (array[j] < pivot)
+		if (array[i] < pivot)
 		{
 			tmp = array[i];
 			array[i] = array[j];
