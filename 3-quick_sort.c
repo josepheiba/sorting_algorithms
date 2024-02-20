@@ -9,7 +9,7 @@
  */
 void quick_sort(int *array, size_t size)
 {
-	if (!array || !size)
+	if (!array || !size || size < 2)
 		return;
 
 	q_sort(array, 0, size - 1, size);
