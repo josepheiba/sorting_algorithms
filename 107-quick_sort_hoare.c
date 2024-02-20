@@ -52,19 +52,19 @@ int partition(int *array, int l, int r, size_t size)
 	j = r;
 	pivot = array[r];
 
-	while(1)
+	while (1)
 	{
-		while(array[i] < pivot)
+		while (array[i] < pivot)
 		{
 			i++;
 		}
-		while(array[j] > pivot)
+		while (array[j] > pivot)
 		{
 			j--;
 		}
 
 		if (i >= j)
-			return (i);
+			return (j);
 
 		tmp = array[j];
 		array[j] = array[i];
