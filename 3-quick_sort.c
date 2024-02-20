@@ -56,7 +56,7 @@ int partition(int *array, int l, int r, size_t size)
 			tmp = array[i];
 			array[i] = array[j];
 			array[j] = tmp;
-			if (i != j)
+			if (i != j && array[i] != array[j])
 				print_array(array, size);
 			j++;
 		}
@@ -64,7 +64,7 @@ int partition(int *array, int l, int r, size_t size)
 	tmp = array[j];
 	array[j] = array[r];
 	array[r] = tmp;
-	if (j != r)
+	if (j != r && array[j] != array[r])
 		print_array(array, size);
 	return (j);
 }
