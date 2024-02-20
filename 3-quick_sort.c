@@ -57,21 +57,19 @@ int partition(int *array, int l, int r, size_t size)
             i++;
             if (i != j)
             {
-                // Swap array[i] and array[j]
                 int tmp = array[i];
                 array[i] = array[j];
                 array[j] = tmp;
-                print_array(array, size); // Assuming this function is implemented elsewhere
+                print_array(array, size);
             }
         }
     }
-    // Swap the pivot to its correct position
     if (i + 1 != r)
     {
         int tmp = array[i + 1];
         array[i + 1] = array[r];
         array[r] = tmp;
-        print_array(array, size); // Assuming this function is implemented elsewhere
+        print_array(array, size);
     }
     return i + 1;
 }
