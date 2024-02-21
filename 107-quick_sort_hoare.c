@@ -52,7 +52,7 @@ int partition(int *array, int l, int r, size_t size)
 	j = r;
 	pivot = array[r];
 
-	while (1)
+	while (i < j)
 	{
 		while (array[i] < pivot)
 		{
@@ -63,13 +63,14 @@ int partition(int *array, int l, int r, size_t size)
 			j--;
 		}
 
-		if (i >= j)
-			return (j);
-
-		tmp = array[j];
-		array[j] = array[i];
-		array[i] = tmp;
-		if (j != i && array[j] != array[i])
-			print_array(array, size);
+		if (i < j)
+    {
+      tmp = array[j];
+      array[j] = array[i];
+      array[i] = tmp;
+      if (j != i && array[j] != array[i])
+        print_array(array, size);
+    }
 	}
+	return (j);
 }
