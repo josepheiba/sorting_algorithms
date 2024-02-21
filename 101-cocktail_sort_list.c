@@ -14,7 +14,7 @@ void cocktail_sort_list(listint_t **list)
 
 	right_ptr = NULL;
 	ll_ptr = left_ptr = (*list);
-	while (left_ptr != right_ptr)
+	while (left_ptr < right_ptr)
 	{
 		while (ll_ptr != right_ptr && ll_ptr->next != NULL)
 		{
@@ -26,11 +26,8 @@ void cocktail_sort_list(listint_t **list)
 			else
 				ll_ptr = ll_ptr->next;
 		}
-		ll_ptr = ll_ptr->prev;
 		right_ptr = ll_ptr;
-
-		if (left_ptr->prev == right_ptr && right_ptr->next == left_ptr)
-			break;
+		ll_ptr = ll_ptr->prev;
 
 		while (ll_ptr != left_ptr && ll_ptr->prev != NULL)
 		{
@@ -42,8 +39,8 @@ void cocktail_sort_list(listint_t **list)
 			else
 				ll_ptr = ll_ptr->prev;
 		}
-		ll_ptr = ll_ptr->next;
 		left_ptr = ll_ptr;
+		ll_ptr = ll_ptr->next;
 	}
 }
 
