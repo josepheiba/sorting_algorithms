@@ -70,5 +70,5 @@ int partition(int *array, int l, int r, size_t size)
 			print_array(array, size);
 		}
 	}
-	return (j);
+	return (i);
 }
