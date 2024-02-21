@@ -31,7 +31,7 @@ void q_sort(int *array, int l, int r, size_t size)
 		return;
 	p = partition(array, l, r, size);
 	q_sort(array, l, p - 1, size);
-	q_sort(array, p, r, size);
+	q_sort(array, p + 1, r, size);
 }
 
 /**
@@ -48,19 +48,20 @@ int partition(int *array, int l, int r, size_t size)
 {
 	int pivot, i, j, tmp;
 
-	i = l - 1;
-	j = r + 1;
+	i = l;
+	j = r;
 	pivot = array[r];
 
 	while (i < j)
 	{
-		do {
+		while (array[i] < pivot)
+		{
 			i++;
-		} while (array[i] < pivot);
-
-		do {
+		}
+		while (array[j] > pivot)
+		{
 			j--;
-		} while (array[j] > pivot);
+		}
 
 		if (i < j)
 		{
